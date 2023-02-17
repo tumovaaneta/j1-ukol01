@@ -7,7 +7,9 @@ private Turtle zofka;
     public void start() {
         zofka = new Turtle();
         nakresliPrasatko();
-
+        nakresliOsmiuhelnik();
+        nakresliKruh();
+        nakresliSlunicko();
     }
     private void nakresliPrasatkoNohy() {
 //        vylepsit - funkce nakresliNohu,kterou 2xzavolam
@@ -44,6 +46,16 @@ private Turtle zofka;
             zofka.move(15);
         }
     }
+   private void prejdiNaDruhouCast(){
+        zofka.turnLeft(180);
+        zofka.penUp();
+        zofka.move(200);
+        zofka.turnLeft(90);
+        zofka.move(300);
+   }
+
+
+//   Cast 1
     private void nakresliPrasatko() {
         nakresliPrasatkoTelo();
 
@@ -61,9 +73,60 @@ private Turtle zofka;
         zofka.move(50);
 
         nakresliPrasatkoOcasek();
+
+    prejdiNaDruhouCast();
+
     }
 
+//    Cast 2
+private void nakresliOsmiuhelnik(){
+    zofka.turnRight(90);
+    zofka.penDown();
+    for (int i = 0; i < 8; i++) {
+        zofka.move(40);
+        zofka.turnRight(45);
+    }
+    zofka.penUp();
+    zofka.move(20);
+    zofka.turnRight(90);
+    zofka.move(200);
+}
 
+private void nakresliKruh(){
+        zofka.turnLeft(90);
+        zofka.penDown();
+    for (int i = 0; i < 36; i++) {
+        zofka.move(8);
+        zofka.turnRight(10);
+    }
+    zofka.penUp();
+    zofka.turnRight(90);
+    zofka.move(200);
+}
+
+private void nakresliSlunicko(){
+        zofka.turnLeft(90);
+        zofka.penDown();
+
+        int pocitatlo = 0;
+    for (int i = 0; i < 36; i++) {
+        zofka.move(8);
+        zofka.turnRight(10);
+        pocitatlo++;
+        if (pocitatlo== 3 ){
+            nakresliPaprsek();
+            pocitatlo=0;
+        }
+    }
+}
+
+    private void nakresliPaprsek() {
+        zofka.turnLeft(90);
+        zofka.move(20);
+        zofka.turnLeft(180);
+        zofka.move(20);
+        zofka.turnLeft(90);
+    }
 
 
     public static void main(String[] args) {
