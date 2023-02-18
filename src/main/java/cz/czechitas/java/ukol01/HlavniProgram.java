@@ -19,6 +19,12 @@ private Turtle zofka;
         nakresliDomecek();
         prejdiNaPravyDomecek();
         nakresliDomecek();
+        prejdiNaJmeno();
+        napisA();
+        napisN();
+        napisE();
+        napisT();
+        napisA();
     }
     private void nakresliPrasatkoNohy() {
 //        vylepsit - funkce nakresliNohu,kterou 2xzavolam
@@ -124,6 +130,84 @@ private Turtle zofka;
         zofka.move(600);
         zofka.penDown();
     }
+    private void prejdiNaJmeno() {
+        zofka.penUp();
+        zofka.move(600);
+        zofka.turnLeft(90);
+        zofka.move(250);
+        zofka.turnLeft(90);
+        zofka.move(150);
+        zofka.turnLeft(90);
+
+    }
+
+    private void napisA() {
+        zofka.penDown();
+        zofka.turnRight(15);
+        zofka.move(100);
+        zofka.turnRight(150);
+        zofka.move(60);
+        zofka.turnRight(105);
+        zofka.move(30);
+        zofka.turnRight(180);
+        zofka.move(30);
+        zofka.turnRight(75);
+        zofka.move(40);
+        zofka.penUp();
+        zofka.turnLeft(75);
+        zofka.move(30);
+        zofka.turnLeft(90);
+    }
+
+    private void napisN() {
+        zofka.penDown();
+        zofka.move(100);
+        zofka.turnRight(150);
+        zofka.move(115);
+        zofka.turnLeft(150);
+        zofka.move(100);
+        zofka.penUp();
+        zofka.turnLeft(180);
+        zofka.move(100);
+        zofka.turnLeft(90);
+        zofka.move(30);
+        zofka.turnLeft(90);
+    }
+
+    private void napisE() {
+        zofka.penDown();
+        zofka.move(100);
+        zofka.turnRight(90);
+        for (int i = 0; i < 2; i++) {
+
+            zofka.move(30);
+            zofka.turnRight(180);
+            zofka.move(30);
+            zofka.turnLeft(90);
+            zofka.move(50);
+            zofka.turnLeft(90);
+        }
+        zofka.move(30);
+        zofka.penUp();
+        zofka.move(30);
+        zofka.turnLeft(90);
+    }
+
+    private void napisT() {
+        zofka.move(100);
+        zofka.turnRight(90);
+        zofka.penDown();
+        zofka.move(50);
+        zofka.turnRight(180);
+        zofka.move(25);
+        zofka.turnLeft(90);
+        zofka.move(100);
+        zofka.turnLeft(90);
+        zofka.penUp();
+        zofka.move(50);
+        zofka.turnLeft(90);
+    }
+
 
 //   Cast 1
     private void nakresliPrasatko() {
